@@ -8,7 +8,7 @@ from pydantic import BaseModel
 from . import panel
 from .parse import parse_link
 
-app = FastAPI(title="Xray Usage Checker")
+app = FastAPI(title="XUI Usage Checker")
 
 STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
 
