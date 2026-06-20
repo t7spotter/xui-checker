@@ -1,0 +1,10 @@
+services:
+  xray-checker:
+    build: .
+    image: xray-checker
+    container_name: xray-checker
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    env_file:
+      - .env
