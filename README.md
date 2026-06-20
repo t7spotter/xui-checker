@@ -53,7 +53,7 @@ cp .env.example .env   # then edit .env with your panel URL and admin login
 docker compose up -d --build
 ```
 
-Open <http://localhost:8000>. Stop with `docker compose down`.
+Open <http://localhost:8001>. Stop with `docker compose down`.
 
 > `.env` is gitignored on purpose — it holds your admin password. `.env.example`
 > is a committed template, so keep only placeholder values in it.
