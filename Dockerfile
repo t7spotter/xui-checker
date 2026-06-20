@@ -1,18 +1,14 @@
 FROM python:3.12-slim
 
+ENV PYTHONUNBUFFERED=1
+
+RUN mkdir /app
 WORKDIR /app
 
-# Install dependencies first so they cache across code changes.
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt requirements.txt
 
-COPY app ./app
-COPY static ./static
+RUN python -m pip install --upgrade pip
 
-# Run as a non-root user.
-RUN useradd --create-home appuser
-USER appuser
+RUN pip install -r requirements.txt
 
-EXPOSE 8001
-
-# The run command lives in docker-compose.yml.
+COPY . .
