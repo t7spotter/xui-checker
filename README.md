@@ -1,4 +1,4 @@
-# Xray Usage Checker
+# XUI Usage Checker
 
 A tiny web app where a user pastes their **vmess / vless / trojan / ss** link and
 sees their own traffic usage — how much they've used, what's left, and when it
