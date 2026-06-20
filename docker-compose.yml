@@ -1,8 +1,10 @@
+name: xui-checker
+
 services:
-  xray-checker:
+  xui-checker:
     build: .
-    image: xray-checker
-    container_name: xray-checker
+    image: xui-checker
+    container_name: xui-checker
     command: uvicorn app.main:app --host 0.0.0.0 --port 8001
     restart: unless-stopped
     ports:
